@@ -4,3 +4,67 @@
 2024/02/26 15:52:55 Starting API server on port 8080...
 2024/02/26 15:52:58 startServerHandler 192.168.0.193:52370
 2024/02/26 15:53:07 stopServerHandler 192.168.0.193:52383
+2024/02/26 15:59:52 startServerHandler 192.168.0.62:64973
+2024/02/26 16:00:03 stopServerHandler 192.168.0.193:52877
+2024/02/26 16:00:15 startServerHandler 192.168.0.193:52891
+2024/02/26 16:00:30 stopServerHandler 192.168.0.62:65072
+2024/02/26 16:00:33 startServerHandler 192.168.0.62:65081
+2024/02/26 17:12:37 Starting API server on port 8080...
+2024/02/26 17:13:26 startServerHandler 192.168.0.193:49876
+2024/02/26 17:13:57 startServerHandler 192.168.0.193:49987
+2024/02/26 17:14:16 startServerHandler 192.168.0.193:50177
+2024/02/26 17:15:26 startServerHandler 192.168.0.193:50973
+2024/02/26 17:15:50 startServerHandler 192.168.0.193:51097
+2024/02/26 17:16:36 startServerHandler 192.168.0.193:51163
+2024/02/26 17:16:47 startServerHandler 192.168.0.193:51179
+2024/02/26 17:16:53 stopServerHandler 192.168.0.193:51187
+2024/02/26 17:16:56 startServerHandler 192.168.0.193:51191
+2024/02/26 17:17:10 startServerHandler 192.168.0.193:51097
+2024/02/26 17:17:13 stopServerHandler 192.168.0.193:51097
+2024/02/26 17:19:11 Starting API server on port 8080...
+2024/02/26 17:19:13 startServerHandler 192.168.0.193:51390
+2024/02/26 17:19:28 startServerHandler 192.168.0.193:51408
+2024/02/26 17:19:31 stopServerHandler 192.168.0.193:51412
+2024/02/26 17:19:37 startServerHandler 192.168.0.193:51412
+2024/02/26 17:20:13 startServerHandler 192.168.0.193:51477
+2024/02/26 17:20:28 startServerHandler 192.168.0.193:51412
+2024/02/26 17:22:57 startServerHandler 192.168.0.193:51913
+2024/02/26 17:23:07 startServerHandler 192.168.0.193:51412
+2024/02/26 17:23:46 stopServerHandler 192.168.0.193:51412
+2024/02/26 17:24:35 Starting API server on port 8080...
+2024/02/26 17:24:40 startServerHandler 192.168.0.193:52044
+2024/02/26 17:24:48 startServerHandler 192.168.0.193:52053
+2024/02/26 17:25:11 Starting API server on port 8080...
+2024/02/26 17:25:15 startServerHandler 192.168.0.193:52089
+2024/02/26 17:26:28 Starting API server on port 8080...
+2024/02/26 17:26:35 startServerHandler 192.168.0.193:52181
+2024/02/26 17:26:36 startServerHandler 192.168.0.193:52181
+2024/02/26 17:26:51 stopServerHandler 192.168.0.193:52181
+2024/02/26 17:26:53 startServerHandler 192.168.0.193:52181
+2024/02/26 17:28:57 Starting API server on port 8080...
+2024/02/26 17:29:02 startServerHandler 192.168.0.193:52590
+2024/02/26 17:30:25 Starting API server on port 8080...
+2024/02/26 17:30:25 listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/02/26 17:31:27 Starting API server on port 8080...
+2024/02/26 17:31:28 listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/02/26 17:31:35 startServerHandler 192.168.0.193:52590
+2024/02/26 17:31:42 startServerHandler 192.168.0.193:52590
+2024/02/26 17:31:53 startServerHandler 192.168.0.193:53016
+2024/02/26 17:31:56 stopServerHandler 192.168.0.193:53020
+2024/02/26 17:31:59 stopServerHandler 192.168.0.193:53024
+2024/02/26 17:32:00 stopServerHandler 192.168.0.193:53026
+2024/02/26 17:32:16 Starting API server on port 8080...
+2024/02/26 17:32:16 listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/02/26 17:33:19 Starting API server on port 8080...
+2024/02/26 17:33:28 startServerHandler 192.168.0.193:53098
+2024/02/26 17:33:37 Starting API server on port 8080...
+2024/02/26 17:33:37 listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2024/02/26 17:33:51 Starting API server on port 8080...
+2024/02/26 17:33:53 startServerHandler 192.168.0.193:53115
+2024/02/26 17:34:41 Starting API server on port 8080...
+2024/02/26 17:34:49 startServerHandler 192.168.0.193:53136
+2024/02/26 17:35:29 Starting API server on port 8080...
+2024/02/26 17:35:30 startServerHandler 192.168.0.193:53146
+2024/02/26 17:36:17 Starting API server on port 8080...
+2024/02/26 17:36:17 startServerHandler 192.168.0.193:53155
+2024/02/26 17:37:25 Starting API server on port 8080...

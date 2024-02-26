@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"bytes"
 	"fmt"
 	"log"
 	"net/http"
@@ -18,14 +17,25 @@ var (
 )
 
 func main() {
+	logFile, err := os.OpenFile("D:\\03_Private\\Go_Local_Server\\server.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		fmt.Printf("error opening log file: %v\n", err)
+		os.Exit(1)
+	}
+	defer logFile.Close()
+
+	// Set the output of the log package to the log file
+	log.SetOutput(logFile)
+
 	http.HandleFunc("/start", startServerHandler)
 	http.HandleFunc("/stop", stopServerHandler)
 
-	fmt.Println("Starting API server on port 8080...")
+	log.Println("Starting API server on port 8080...")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func startServerHandler(w http.ResponseWriter, r *http.Request) {
+	log.Println("startServerHandler", r.RemoteAddr)
 	serverCmdMutex.Lock()
 	defer serverCmdMutex.Unlock()
 
@@ -39,14 +49,9 @@ func startServerHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var outBuffer, errBuffer bytes.Buffer
-
 	serverCmd = exec.Command("D:\\00_Development\\Dclo_Back\\venv\\Scripts\\python.exe", "D:\\00_Development\\Dclo_Back\\run.py")
 	serverCmd.Env = append(os.Environ(), envVars...)
 	serverCmd.Env = append(serverCmd.Env, "SYSTEM_TYPE=LOCAL")
-
-	serverCmd.Stdout = &outBuffer
-	serverCmd.Stderr = &errBuffer
 
 	err = serverCmd.Start()
 	if err != nil {
@@ -54,7 +59,7 @@ func startServerHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	_, _ = fmt.Fprintf(w, "Starting server...\nOutput:\n%s\nError:\n%s", outBuffer.String(), errBuffer.String())
+	_, _ = fmt.Fprintf(w, "Starting server...")
 }
 
 func getEnvVars(w http.ResponseWriter) ([]string, error, bool) {
@@ -86,6 +91,7 @@ func readEnvFile(filePath string) ([]string, error) {
 }
 
 func stopServerHandler(w http.ResponseWriter, r *http.Request) {
+	log.Println("stopServerHandler", r.RemoteAddr)
 	serverCmdMutex.Lock()
 	defer serverCmdMutex.Unlock()
 

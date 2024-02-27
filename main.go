@@ -53,6 +53,14 @@ func startServerHandler(w http.ResponseWriter, r *http.Request) {
 	serverCmd.Env = append(os.Environ(), envVars...)
 	serverCmd.Env = append(serverCmd.Env, "SYSTEM_TYPE=LOCAL")
 
+	// Run redis server
+	cmd := exec.Command("wsl", "redis-server")
+	err = cmd.Start()
+	if err != nil {
+		log.Printf("Failed to start redis-server via WSL: %v", err)
+		return
+	}
+
 	err = serverCmd.Start()
 	if err != nil {
 		http.Error(w, "Failed to run python server", http.StatusInternalServerError)
@@ -63,7 +71,7 @@ func startServerHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getEnvVars(w http.ResponseWriter) ([]string, error, bool) {
-	envVars, err := readEnvFile("D:\\00_Development\\Dclo_Back\\.env")
+	envVars, err := readEnvFile("D:/00_Development/Dclo_Back/.env")
 	if err != nil {
 		http.Error(w, "Failed to read .env file", http.StatusInternalServerError)
 		return nil, nil, true

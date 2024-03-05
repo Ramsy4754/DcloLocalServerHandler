@@ -52,8 +52,8 @@ func startAdminServerHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dcloServerCmd = exec.Command("D:/00_Development/Dclo_Admin/.venv/Scripts/python.exe", "D:/00_Development/Dclo_Admin/run.py")
-	err := dcloServerCmd.Start()
+	adminServerCmd = exec.Command("D:/00_Development/Dclo_Admin/.venv/Scripts/python.exe", "D:/00_Development/Dclo_Admin/run.py")
+	err := adminServerCmd.Start()
 	if err != nil {
 		http.Error(w, "Failed to run python server", http.StatusInternalServerError)
 		return

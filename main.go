@@ -55,7 +55,7 @@ func startAdminServerHandler(w http.ResponseWriter, r *http.Request) {
 	adminServerCmd = exec.Command("D:/00_Development/Dclo_Admin/.venv/Scripts/python.exe", "D:/00_Development/Dclo_Admin/run.py", "--host", "0.0.0.0")
 
 	// Set Environment Variables
-	adminServerCmd.Env = append(os.Environ(), "ADMIN_API_SERVER_ENV=local")
+	adminServerCmd.Env = append(os.Environ(), "SYSTEM_TYPE=local")
 
 	err := adminServerCmd.Start()
 	if err != nil {

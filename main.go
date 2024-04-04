@@ -99,9 +99,11 @@ func startDcloServerHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dcloServerCmd = exec.Command("D:/00_Development/Dclo_Back/venv/Scripts/python.exe", "D:/00_Development/Dclo_Back/run.py")
+	dcloServerCmd = exec.Command("D:/00_Development/Dclo_Back/.venv/Scripts/flask.exe", "run -p 5050")
+	dcloServerCmd.Dir = "D:/00_Development/Dclo_Back/"
 	dcloServerCmd.Env = append(os.Environ(), envVars...)
-	dcloServerCmd.Env = append(dcloServerCmd.Env, "SYSTEM_TYPE=local")
+	dcloServerCmd.Env = append(dcloServerCmd.Env, "SYSTEM_TYPE=LOCAL")
+	dcloServerCmd.Env = append(dcloServerCmd.Env, "FLASK_APP=run")
 
 	// Run redis server
 	cmd := exec.Command("wsl", "redis-server")

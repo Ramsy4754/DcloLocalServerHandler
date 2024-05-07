@@ -99,7 +99,7 @@ func startDcloServerHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dcloServerCmd = exec.Command("poetry", "run", "flask", "run")
+	dcloServerCmd = exec.Command("poetry", "run", "flask", "run", "-h", "0.0.0.0", "-p", "5000")
 	dcloServerCmd.Dir = "D:/00_Development/Dclo_Back"
 	dcloServerCmd.Env = append(os.Environ(), envVars...)
 	//dcloServerCmd.Env = append(dcloServerCmd.Env, "SYSTEM_TYPE=LOCAL")
